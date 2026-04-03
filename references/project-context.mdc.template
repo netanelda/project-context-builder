@@ -1,0 +1,14 @@
+---
+description: Nicknames and IDs for n8n workflows, Monday boards, and Slack channels.
+globs:
+---
+
+# Project Nicknames & Context
+
+When the user refers to resources by nickname (e.g., "Main Flow", "Results Board", "Playground"), look up the actual IDs in `PROJECT_CONTEXT.md`.
+
+- **Source of Truth:** Always refer to `PROJECT_CONTEXT.md` for the current mapping of nicknames to IDs and links.
+- **Workflow IDs:** Map common names to the correct n8n workflow ID.
+- Use the Playground/sandbox Slack channel for testing unless the user says otherwise.
+
+This rule ensures you (and any subagents) always understand exactly which resource the user is referring to.

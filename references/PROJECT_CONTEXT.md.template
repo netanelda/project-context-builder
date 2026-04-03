@@ -1,0 +1,19 @@
+# Project Context: [Project Name]
+
+This document is the central reference for all resources used in this project.
+Agents should refer to this file when the user uses nicknames or shorthand.
+
+## n8n Workflows
+
+| Nickname | Workflow Name | ID | Description |
+| :--- | :--- | :--- | :--- |
+
+## Monday Boards
+
+| Nickname | Board Name | ID | Link | Description |
+| :--- | :--- | :--- | :--- | :--- |
+
+## Slack Channels
+
+| Nickname | Channel Name | ID | Description |
+| :--- | :--- | :--- | :--- |
