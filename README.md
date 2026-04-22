@@ -6,7 +6,7 @@ Works with both **Claude Code** and **Cursor**.
 
 ## The Problem
 
-When working across n8n, Monday.com, and Slack, you constantly juggle IDs like `pI0F5KDT8uLeyh30`, `18403977089`, or `C0ALTF040KE`. You know them as "Main Flow", "Results Board", and "Escalations" — but your AI agents don't.
+When working across n8n, Monday.com, and Slack, you constantly juggle IDs like `aBcDeFgH12345678`, `1234567890`, or `C012ABC3DEF`. You know them as "Main Flow", "Results Board", and "Escalations" — but your AI agents don't.
 
 ## The Solution
 
@@ -14,7 +14,7 @@ This skill creates and maintains a `PROJECT_CONTEXT.md` file that serves as a sh
 
 ```
 User: "Run the Main Flow"
-Agent: (looks up PROJECT_CONTEXT.md) → calls n8n workflow pI0F5KDT8uLeyh30
+Agent: (looks up PROJECT_CONTEXT.md) → calls n8n workflow aBcDeFgH12345678
 ```
 
 ## How It Works
@@ -63,9 +63,9 @@ This creates `PROJECT_CONTEXT.md`, the Cursor rule, and the Claude Code rule in 
 
 **By URL or ID:**
 ```
-> Add this Monday board: https://monday.monday.com/boards/12345678
-> Register workflow pI0F5KDT8uLeyh30
-> Add Slack channel C0ALTF040KE
+> Add this Monday board: https://acme.monday.com/boards/1234567890
+> Register workflow aBcDeFgH12345678
+> Add Slack channel C012ABC3DEF
 ```
 
 **By reference:**
@@ -76,7 +76,7 @@ This creates `PROJECT_CONTEXT.md`, the Cursor rule, and the Claude Code rule in 
 
 **Batch:**
 ```
-> Add these 3 workflows: pI0F5KDT8uLeyh30, oHhpZkxlp1OePSjU, s2YdH6FJHg9P6Q0k
+> Add these 3 workflows: aBcDeFgH12345678, xYzWvUtS98765432, mNoPqRsT11223344
 ```
 
 ### Trigger phrases
@@ -105,19 +105,19 @@ The central document. Contains tables for each resource type:
 
 | Nickname | Workflow Name | ID | Description |
 | :--- | :--- | :--- | :--- |
-| **Main Flow** | Email Localization Pipeline | `pI0F5KDT8uLeyh30` | Extracts HTML spans, translates via Gemini, coordinates QA. |
+| **Main Flow** | Daily Report Pipeline | `aBcDeFgH12345678` | Fetches data from API, transforms records, and sends summary notifications. |
 
 ## Monday Boards
 
 | Nickname | Board Name | ID | Link | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Results Board** | QA Results | `18403977089` | [Link](https://monday.monday.com/boards/18403977089) | Tracks QA scores and final HTML files. |
+| **Results Board** | Task Tracker | `1234567890` | [Link](https://acme.monday.com/boards/1234567890) | Tracks task status and completion metrics. |
 
 ## Slack Channels
 
 | Nickname | Channel Name | ID | Description |
 | :--- | :--- | :--- | :--- |
-| **Playground** | `#builders-lab` | `C0AR3PVGED7` | Sandbox for testing Slack nodes. |
+| **Playground** | `#dev-sandbox` | `C034XYZ5GHI` | Sandbox channel for testing integrations. |
 ```
 
 ### `.cursor/rules/project-context.mdc`

@@ -12,7 +12,7 @@ Maintains a central `PROJECT_CONTEXT.md` file that maps human-friendly nicknames
 ## When to Activate
 
 - User adds, creates, or references an **n8n workflow** (via MCP tools or by mentioning a workflow ID).
-- User adds, creates, or references a **Monday.com board** (via Monday MCP tools or by pasting a board URL like `monday.monday.com/boards/<ID>`).
+- User adds, creates, or references a **Monday.com board** (via Monday MCP tools or by pasting a board URL like `yourcompany.monday.com/boards/<ID>`).
 - User adds or references a **Slack channel** (via Slack MCP tools or by providing a channel ID like `C0xxxxxxxx`).
 - User says: "add this to the project context", "remember this board", "register this flow", "add this channel to the brain", "update project context", "set up project context", "initialize the project brain".
 
@@ -33,7 +33,7 @@ Parse the user's input to determine:
 | Input Pattern | Resource Type | How to Extract ID |
 |---|---|---|
 | n8n workflow ID (alphanumeric, ~16 chars) or MCP workflow call | n8n Workflow | Use the ID directly |
-| `monday.monday.com/boards/<ID>` or board ID (numeric) | Monday Board | Extract numeric ID from URL or input |
+| `yourcompany.monday.com/boards/<ID>` or board ID (numeric) | Monday Board | Extract numeric ID from URL or input |
 | Slack channel ID (`C0xxxxxxxxx`) or `#channel-name` | Slack Channel | Use the ID directly, or search by name |
 
 ### Step 3: Enrich via MCP
@@ -72,7 +72,7 @@ Add the new resource to the correct section using the table format:
 
 **Monday Boards:**
 ```
-| **[Nickname]** | [Board Name] | `[ID]` | [Link](https://monday.monday.com/boards/[ID]) | [1-2 sentence description] |
+| **[Nickname]** | [Board Name] | `[ID]` | [Link](https://yourcompany.monday.com/boards/[ID]) | [1-2 sentence description] |
 ```
 
 **Slack Channels:**
